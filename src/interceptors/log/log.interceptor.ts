@@ -9,7 +9,7 @@ import { Observable, tap } from 'rxjs';
 @Injectable()
 export class LogInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
-    console.log('hello world');
+  
     const initialDate = Date.now();
     return next.handle().pipe(
       tap(() => {
